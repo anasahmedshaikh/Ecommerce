@@ -1,9 +1,5 @@
 import Image from "next/image"
-import visaim from "@/public/images/footerimages/Visa.png"
-import appleim from "@/public/images/footerimages/ApplePay.png"
-import gpayim from "@/public/images/footerimages/GPay.png"
-import masterim from "@/public/images/footerimages/Mastercard.png"
-import paypalim from "@/public/images/footerimages/Paypal.png"
+import Newsletter from "./subscribeToNewsletter"
 
 
 export default function Footer() {
@@ -11,23 +7,7 @@ export default function Footer() {
 
     return (
         <footer className="bg-[#F3F0F1] pt-16 pb-12  absolute w-full">
-            <section className="bg-black text-white py-8 w-[90vw] h-72 lg:h-48 rounded-3xl px-8 ml-[5vw] -mt-52 lg:-mt-40">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                    <h2 className="text-2xl md:text-3xl font-bold md:w-1/2">
-                    STAY UPTO DATE ABOUT OUR LATEST OFFERS
-                    </h2>
-                    <form className="flex flex-col gap-4 w-full md:w-1/2 justify-start">
-                    <input
-                        type="email"
-                        placeholder="Enter your email address"
-                        className="px-4 py-3 rounded-full text-black text-sm w-96 max-w-full"
-                    />
-                    <button type="submit" className="bg-white text-black px-6 py-3 rounded-full font-semibold text-sm w-96 max-w-full">
-                        Subscribe to Newsletter
-                    </button>
-                    </form>
-                </div>
-            </section>
+            <Newsletter />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
                 <div className="xl:grid xl:grid-cols-3 xl:gap-8">
                     <div className="space-y-8 xl:col-span-1">
@@ -105,10 +85,10 @@ export default function Footer() {
                                 </h3>
                                 <ul className="mt-4 space-y-4">
                                     <li>
-                                        <a href="#" className="text-base text-gray-500 hover:text-gray-900"> Whatsapp </a>
+                                        <a href="/contact-us" className="text-base text-gray-500 hover:text-gray-900"> Whatsapp </a>
                                     </li>
                                     <li>
-                                        <a href="#" className="text-base text-gray-500 hover:text-gray-900"> Support 24h </a>
+                                        <a href="/contact-us" className="text-base text-gray-500 hover:text-gray-900"> Support 24h </a>
                                     </li>
                                 </ul>
                             </div>
@@ -139,11 +119,11 @@ export default function Footer() {
                         &copy; 2023 SHOP.CO, Inc. All rights reserved.
                     </p>
                     <div className="flex space-x-4 p-4 mt-4 md:mt-0">
-                        <div className="bg-white p-4"><Image className="h-4 w-auto " src={visaim} alt="Visa"/></div>
-                        <div className="bg-white p-4"><Image className="h-4 w-auto " src={masterim} alt="Mastercard"/></div>
-                        <div className="bg-white p-4"><Image className="h-4 w-auto " src={paypalim} alt="PayPal"/></div>
-                        <div className="bg-white p-4"><Image className="h-4 w-auto " src={appleim} alt="Apple Pay" /></div>
-                        <div className="bg-white p-4"><Image className="h-4 w-auto " src={gpayim} alt="Google Pay" /></div>
+                        <div className="bg-white p-4"><Image className="h-4 w-auto " width={50} height={30} src='/images/footerimages/Visa.png' alt="Visa"/></div>
+                        <div className="bg-white p-4"><Image className="h-4 w-auto " width={50} height={30} src='/images/footerimages/Mastercard.png' alt="Mastercard"/></div>
+                        <div className="bg-white p-4"><Image className="h-4 w-auto " width={50} height={30} src='/images/footerimages/Paypal.png' alt="PayPal"/></div>
+                        <div className="bg-white p-4"><Image className="h-4 w-auto " width={50} height={30} src='/images/footerimages/ApplePay.png' alt="Apple Pay" /></div>
+                        <div className="bg-white p-4"><Image className="h-4 w-auto " width={50} height={30} src='/images/footerimages/GPay.png' alt="Google Pay" /></div>
                     </div>
                 </div>
             </div>

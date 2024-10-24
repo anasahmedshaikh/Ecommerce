@@ -14,3 +14,12 @@ export interface CartItem {
   color: string;
   quantity: number;
 }
+export interface TypeProduct {
+  id: number
+  name: string
+  price: number
+  oldPrice?: number
+  rating: number
+  image: string
+  category: string
+}

@@ -1,21 +1,17 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Star } from "lucide-react"
-import img7 from "@/public/images/newArrivals/image7.png"
-import img8 from "@/public/images/newArrivals/image8.png"
-import img9 from "@/public/images/newArrivals/image9.png"
-import img10 from "@/public/images/newArrivals/image10.png"
-
+ 
 export default function NewArrival(){
     return(
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 overflow-hidden">
         <h2 className="mb-8 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-black text-center">NEW ARRIVALS</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { name: 'T-shirt with Tape Details', price: 120, rating: 5, image: img7 },
-            { name: 'Skinny Fit Jeans', price: 240, oldPrice: 260, rating: 4.5, image: img8 },
-            { name: 'Checkered Shirt', price: 180, rating: 4.7, image: img9 },
-            { name: 'Sleeve Striped T-shirt', price: 130, oldPrice: 160, rating: 4.8, image: img10 },
+            { name: 'T-shirt with Tape Details', price: 120, rating: 5, image: "/images/products/t-shirt-with-taped-details.png" },
+            { name: 'Skinny Fit Jeans', price: 240, oldPrice: 260, rating: 4.5, image: "/images/products/skinny-fit-jeans.png" },
+            { name: 'Checkered Shirt', price: 180, rating: 4.7, image: "/images/products/checkerd-shirt.png" },
+            { name: 'Sleeve Striped T-shirt', price: 130, oldPrice: 160, rating: 4.8, image: "/images/products/sleeve-striped-t-shirt.png" },
           ].map((product) => (
             <div key={product.name} className="group text-black">
               <div className="aspect-w-1 aspect-h-1 h-72 w-full overflow-hidden rounded-lg bg-gray-200 mb-4">

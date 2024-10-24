@@ -1,10 +1,6 @@
 import { Star } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import verticalStriped from "@/public/images/topselling/vetical-striped.png"
-import courageGraphic from "@/public/images/topselling/courage-graphic.png"
-import looseFit from "@/public/images/topselling/loose-fit.png"
-import fadedSkinny from "@/public/images/topselling/skinny-geans.png"
 
 export default function TopSelling(){
     return(
@@ -12,12 +8,12 @@ export default function TopSelling(){
         <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center font-extrabold text-black mb-8">TOP SELLING</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { name: 'Vertical Striped Shirt', price: 212, oldPrice: 232, rating: 5, image: verticalStriped },
-            { name: 'Courage Graphic T-shirt', price: 145, rating: 4.3, image: courageGraphic },
-            { name: 'Loose Fit Bermuda Shorts', price: 80, rating: 4, image: looseFit },
-            { name: 'Faded Skinny Jeans', price: 210, rating: 4.5, image: fadedSkinny },
+            { name: 'Vertical Striped Shirt', price: 212, oldPrice: 232, rating: 5, image: "/images/products/vertical-striped.png" },
+            { name: 'Courage Graphic T-shirt', price: 145, rating: 4.3, image: "/images/products/courage-graphic.png" },
+            { name: 'Loose Fit Bermuda Shorts', price: 80, rating: 4, image: "/images/products/loose-fit.png" },
+            { name: 'Faded Skinny Jeans', price: 210, rating: 4.5, image: "/images/products/faded-skinny-jeans.png" },
           ].map((product) => (
-            <div key={product.name} className="group">
+            <div key={product.name} className="">
               <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 mb-4">
                 <Image src={product.image} alt={product.name} width={300} height={300} className="object-cover object-center group-hover:opacity-75" />
               </div>

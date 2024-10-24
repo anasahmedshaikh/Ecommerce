@@ -2,18 +2,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Minus, Plus, X } from 'lucide-react'
 import { CartItem } from '@/lib/utils'
-import graphicT from '@/public/images/topselling/courage-graphic.png'
-import skinnyJeans from '@/public/images/topselling/skinny-geans.png'
-import checkerd from '@/public/images/newArrivals/image9.png'
-
-
 
 
 export default function Component() {
   const cartItems: CartItem[] = [
-    { id: 1, name: 'Gradient Graphic T-shirt', price: 145, image: graphicT, size: 'Large', color: 'White', quantity: 1 },
-    { id: 2, name: 'Checkered Shirt', price: 180, image: checkerd, size: 'Medium', color: 'Red', quantity: 2 },
-    { id: 3, name: 'Skinny Fit Jeans', price: 240, image: skinnyJeans , size: 'Large', color: 'Blue', quantity: 1 },
+    { id: 1, name: 'Gradient Graphic T-shirt', price: 145, image: "/images/products/gradient-graphic-t-shirt.png", size: 'Large', color: 'White', quantity: 1 },
+    { id: 2, name: 'Checkered Shirt', price: 180, image: "/images/products/checkerd-shirt.png", size: 'Medium', color: 'Red', quantity: 2 },
+    { id: 3, name: 'Skinny Fit Jeans', price: 240, image: "/images/products/skinny-fit-jeans.png", size: 'Large', color: 'Blue', quantity: 1 },
   ]
 
   const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
